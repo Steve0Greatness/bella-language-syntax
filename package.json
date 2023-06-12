@@ -21,5 +21,9 @@
       "scopeName": "source.bella",
       "path": "./syntaxes/bella.tmLanguage.json"
     }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Steve0Greatness/bella-language-syntax.git"
   }
 }
