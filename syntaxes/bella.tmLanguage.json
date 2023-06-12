@@ -19,6 +19,9 @@
 		},
 		{
 			"include": "#entity"
+		},
+		{
+			"include": "#constant"
 		}
 	],
 	"repository": {
@@ -85,6 +88,14 @@
 			"match": "\\b(true|false)\\b",
 			"patterns": []
 		},
+		"constant": {
+			"patterns": [
+				{
+					"name": "constant.numeric.bella",
+					"match": "\\b[0-9]+\\b"
+				}
+			]
+		},
 		"entity": {
 			"patterns": [
 			  {
@@ -100,6 +111,14 @@
 					"name": "entity.name.function.bella"
 				  }
 				}
+			  },
+			  {
+				"name": "variable.parameter.gleam",
+				"match": "\\b([[:lower:]][[:word:]]*):\\s"
+			  },
+			  {
+				"name": "entity.name.namespace.gleam",
+				"match": "\\b([[:lower:]][[:word:]]*):"
 			  }
 			]
 		  }
