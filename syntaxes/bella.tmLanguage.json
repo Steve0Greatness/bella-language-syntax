@@ -11,10 +11,32 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.bella",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.bella",
+					"match": "\\b(if|try|else|let|in|import|throw)\\b"
+				},
+				{
+					"name": "keyword.operator.comparison.int.bella",
+					"match": "(<=|>=|==|!=|<|>)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.int.bella",
+					"match": "(\\+|\\-|/|\\*)"
+				},
+				{
+					"name": "keyword.operator.logical.bella",
+					"match": "(and|or)"
+				},
+				{
+					"name": "keyword.operator.arrow.bella",
+					"match": "(->)"
+				},
+				{
+					"name": "keyword.operator.other.bella",
+					"match": "(\\|>)"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.bella",
@@ -26,6 +48,19 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"patterns": [
+			  {
+				"name": "comment.line.bella",
+				"match": ";.*"
+			  }
+			]
+		},
+		"boolean": {
+			"name": "constant.language.boolean.bella",
+			"match": "\\b(true|false)\\b",
+			"patterns": []
 		}
 	},
 	"scopeName": "source.bella"
