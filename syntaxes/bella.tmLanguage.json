@@ -7,6 +7,18 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#characters"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#entity"
 		}
 	],
 	"repository": {
@@ -49,6 +61,17 @@
 				}
 			]
 		},
+		"characters": {
+			"name": "string.quoted.single.bella",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.bella",
+					"match": "\\\\."
+				}
+			]
+		},
 		"comments": {
 			"patterns": [
 			  {
@@ -61,7 +84,25 @@
 			"name": "constant.language.boolean.bella",
 			"match": "\\b(true|false)\\b",
 			"patterns": []
-		}
+		},
+		"entity": {
+			"patterns": [
+			  {
+				"begin": "\\b([[:lower:]][[:word:]]*)([[:space:]]*)?\\(",
+				"end": "\\)",
+				"patterns": [
+				  {
+					"include": "$self"
+				  }
+				],
+				"captures": {
+				  "1": {
+					"name": "entity.name.function.bella"
+				  }
+				}
+			  }
+			]
+		  }
 	},
 	"scopeName": "source.bella"
 }
