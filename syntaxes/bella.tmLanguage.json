@@ -15,7 +15,7 @@
 				{
 					"name": "keyword.control.bella",
 					"match": "\\b(if|try|else|let|in|import|throw)\\b"
-				},
+				},			
 				{
 					"name": "keyword.operator.comparison.int.bella",
 					"match": "(<=|>=|==|!=|<|>)"
